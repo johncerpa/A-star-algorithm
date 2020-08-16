@@ -34,7 +34,7 @@ for i, v in enumerate(adj_matrix, 0):
             edges.add(frozenset([i, j]))
             adj_list[node_names[i]].append((node_names[j], u))
 
-path_found = Graph(adj_list).a_star_algorithm('A', 'D')
+path_found = Graph(adj_list).a_star_algorithm('A', node_names[len(adj_matrix)-1])
 
 if path_found is not None:
     print('Path found: {}'.format(path_found))
